@@ -1,0 +1,563 @@
+<html><head><base href="https://redm-rp-nft.fr/"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RedM RP NFT L'Épopée de l'Ouest Sauvage Numérique</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+  :root {
+    --primary-color: #d4af37;
+    --secondary-color: #8b4513;
+    --background-color: #1c1c1c;
+    --text-color: #f0e68c;
+    --matic-color: #8247e5;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-image: url('https://example.com/wild-west-texture.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+  }
+
+  h1 {
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .marketplace {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .item {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  .item:hover {
+    transform: translateY(-10px);
+  }
+
+  .item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .item:hover img {
+    transform: scale(1.05);
+  }
+
+  .rarity {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.1em;
+  }
+
+  .common { color: #ffffff; }
+  .uncommon { color: #1eff00; }
+  .rare { color: #0070dd; }
+  .epic { color: #a335ee; }
+  .legendary { color: #ff8000; }
+
+  .price, .supply, .minted {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .price {
+    color: var(--matic-color);
+  }
+
+  .supply {
+    color: var(--primary-color);
+  }
+
+  .minted {
+    color: #00ff00;
+  }
+
+  .connect-wallet {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .connect-wallet:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  }
+
+  #whitepaper {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+
+  #whitepaper h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #whitepaper h3 {
+    color: var(--primary-color);
+    margin-top: 30px;
+  }
+
+  #whitepaper p {
+    text-align: justify;
+    line-height: 1.6;
+  }
+
+  #whitepaper ul {
+    padding-left: 20px;
+  }
+
+  #whitepaper li {
+    margin-bottom: 10px;
+  }
+
+  .roadmap {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+
+  .roadmap h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .roadmap-item {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .roadmap-item h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+  }
+
+  .roadmap-item ul {
+    padding-left: 20px;
+  }
+
+  @keyframes shineCommon {
+    0% { box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.5); transform: scale(1); }
+    50% { box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8); transform: scale(1.05); }
+    100% { box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.5); transform: scale(1); }
+  }
+
+  @keyframes shineUncommon {
+    0% { box-shadow: 0 0 5px 0px rgba(30, 255, 0, 0.5); transform: scale(1); }
+    50% { box-shadow: 0 0 20px 10px rgba(30, 255, 0, 0.8); transform: scale(1.05); }
+    100% { box-shadow: 0 0 5px 0px rgba(30, 255, 0, 0.5); transform: scale(1); }
+  }
+
+  @keyframes shineRare {
+    0% { box-shadow: 0 0 5px 0px rgba(0, 112, 221, 0.5); transform: scale(1); }
+    50% { box-shadow: 0 0 20px 10px rgba(0, 112, 221, 0.8); transform: scale(1.05); }
+    100% { box-shadow: 0 0 5px 0px rgba(0, 112, 221, 0.5); transform: scale(1); }
+  }
+
+  @keyframes shineEpic {
+    0% { box-shadow: 0 0 5px 0px rgba(163, 53, 238, 0.5); transform: scale(1); }
+    50% { box-shadow: 0 0 20px 10px rgba(163, 53, 238, 0.8); transform: scale(1.05); }
+    100% { box-shadow: 0 0 5px 0px rgba(163, 53, 238, 0.5); transform: scale(1); }
+  }
+
+  @keyframes shineLegendary {
+    0% { box-shadow: 0 0 5px 0px rgba(255, 128, 0, 0.5); transform: scale(1); }
+    50% { box-shadow: 0 0 20px 10px rgba(255, 128, 0, 0.8); transform: scale(1.05); }
+    100% { box-shadow: 0 0 5px 0px rgba(255, 128, 0, 0.5); transform: scale(1); }
+  }
+
+  .item img {
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  .item.common img { animation-name: shineCommon; }
+  .item.uncommon img { animation-name: shineUncommon; }
+  .item.rare img { animation-name: shineRare; }
+  .item.epic img { animation-name: shineEpic; }
+  .item.legendary img { animation-name: shineLegendary; }
+
+  footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+  }
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>RedM RP NFT L'Épopée de l'Ouest Sauvage Numérique</h1>
+      <nav>
+        <a href="#gameplay">Gameplay</a>
+        <a href="#marketplace">Marché NFT</a>
+        <a href="#whitepaper">Livre Blanc</a>
+        <a href="#roadmap">Feuille de Route</a>
+      </nav>
+      <button class="connect-wallet">Connecter Portefeuille</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <section id="gameplay">
+      <h2>Découvrez l'Aventure Red Dead Redemption 2</h2>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eaW0tYpxyp0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+      </div>
+    </section>
+
+    <section id="marketplace">
+      <h2>Marché NFT Votre Porte d'Entrée vers l'Ouest Sauvage</h2>
+      <div class="marketplace">
+        <a href="https://redm-rp-nft.fr/marketplace/cheval-legendaire" class="item legendary">
+          <img src="https://example.com/cheval-rdr2.jpg" alt="Cheval de Red Dead Redemption 2" width="250" height="250">
+          <h3>Cheval Légendaire</h3>
+          <p class="rarity legendary">Légendaire</p>
+          <p class="price">Prix: 1000 MATIC</p>
+          <p class="supply">Supply: 50</p>
+          <p class="minted">Mintés: 23</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/terrain-ranch" class="item epic">
+          <img src="https://example.com/terrain-rdr2.jpg" alt="Terrain de Red Dead Redemption 2" width="250" height="250">
+          <h3>Terrain de Ranch</h3>
+          <p class="rarity epic">Épique</p>
+          <p class="price">Prix: 750 MATIC</p>
+          <p class="supply">Supply: 100</p>
+          <p class="minted">Mintés: 67</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/pistolet-personnalise" class="item rare">
+          <img src="https://example.com/pistolet-rdr2.jpg" alt="Pistolet de Red Dead Redemption 2" width="250" height="250">
+          <h3>Pistolet Personnalisé</h3>
+          <p class="rarity rare">Rare</p>
+          <p class="price">Prix: 500 MATIC</p>
+          <p class="supply">Supply: 200</p>
+          <p class="minted">Mintés: 142</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/fusil-precision" class="item epic">
+          <img src="https://example.com/fusil-rdr2.jpg" alt="Fusil de Red Dead Redemption 2" width="250" height="250">
+          <h3>Fusil de Précision</h3>
+          <p class="rarity epic">Épique</p>
+          <p class="price">Prix: 650 MATIC</p>
+          <p class="supply">Supply: 150</p>
+          <p class="minted">Mintés: 98</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/arc-amerindien" class="item rare">
+          <img src="https://example.com/arc-rdr2.jpg" alt="Arc amérindien de Red Dead Redemption 2" width="250" height="250">
+          <h3>Arc Amérindien</h3>
+          <p class="rarity rare">Rare</p>
+          <p class="price">Prix: 450 MATIC</p>
+          <p class="supply">Supply: 250</p>
+          <p class="minted">Mintés: 187</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/diligence-luxueuse" class="item epic">
+          <img src="https://example.com/diligence-rdr2.jpg" alt="Diligence de Red Dead Redemption 2" width="250" height="250">
+          <h3>Diligence Luxueuse</h3>
+          <p class="rarity epic">Épique</p>
+          <p class="price">Prix: 800 MATIC</p>
+          <p class="supply">Supply: 75</p>
+          <p class="minted">Mintés: 41</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/saloon-far-west" class="item legendary">
+          <img src="https://example.com/saloon-rdr2.jpg" alt="Saloon de Red Dead Redemption 2" width="250" height="250">
+          <h3>Saloon du Far West</h3>
+          <p class="rarity legendary">Légendaire</p>
+          <p class="price">Prix: 1200 MATIC</p>
+          <p class="supply">Supply: 25</p>
+          <p class="minted">Mintés: 12</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/tenue-cowboy" class="item uncommon">
+          <img src="https://example.com/vetement-rdr2.jpg" alt="Vêtement de Red Dead Redemption 2" width="250" height="250">
+          <h3>Tenue de Cowboy</h3>
+          <p class="rarity uncommon">Peu commun</p>
+          <p class="price">Prix: 300 MATIC</p>
+          <p class="supply">Supply: 500</p>
+          <p class="minted">Mintés: 423</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/poule-ferme" class="item common">
+          <img src="https://example.com/poule-rdr2.jpg" alt="Poule de Red Dead Redemption 2" width="250" height="250">
+          <h3>Poule de Ferme</h3>
+          <p class="rarity common">Commun</p>
+          <p class="price">Prix: 100 MATIC</p>
+          <p class="supply">Supply: 1000</p>
+          <p class="minted">Mintés: 876</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/vache-laitiere" class="item uncommon">
+          <img src="https://example.com/vache-rdr2.jpg" alt="Vache de Red Dead Redemption 2" width="250" height="250">
+          <h3>Vache Laitière</h3>
+          <p class="rarity uncommon">Peu commun</p>
+          <p class="price">Prix: 250 MATIC</p>
+          <p class="supply">Supply: 750</p>
+          <p class="minted">Mintés: 621</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/mouton-prairie" class="item uncommon">
+          <img src="https://example.com/mouton-rdr2.jpg" alt="Mouton de Red Dead Redemption 2" width="250" height="250">
+          <h3>Mouton de Prairie</h3>
+          <p class="rarity uncommon">Peu commun</p>
+          <p class="price">Prix: 200 MATIC</p>
+          <p class="supply">Supply: 800</p>
+          <p class="minted">Mintés: 687</p>
+        </a>
+        <a href="https://redm-rp-nft.fr/marketplace/chien-berger" class="item rare">
+          <img src="https://example.com/chien-rdr2.jpg" alt="Chien de Red Dead Redemption 2" width="250" height="250">
+          <h3>Chien de Berger</h3>
+          <p class="rarity rare">Rare</p>
+          <p class="price">Prix: 400 MATIC</p>
+          <p class="supply">Supply: 300</p>
+          <p class="minted">Mintés: 254</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="whitepaper">
+      <h2>Livre Blanc</h2>
+      
+      <h3>1. Introduction</h3>
+      <p>RedM RP NFT est une expérience innovante qui fusionne le gameplay immersif de Red Dead Redemption 2 avec la technologie blockchain et les NFTs. Notre projet vise à créer un écosystème unique où les joueurs peuvent posséder, échanger et utiliser des actifs numériques uniques dans un monde western riche et dynamique.</p>
+
+      <h3>2. Concept du Jeu</h3>
+      <p>RedM RP NFT permet aux joueurs de vivre une expérience de jeu de rôle authentique dans l'Ouest sauvage. Chaque joueur peut créer son propre personnage, acquérir des propriétés, des animaux et des objets sous forme de NFTs, et participer à une économie de jeu complexe basée sur la blockchain.</p>
+
+      <h3>3. Technologie</h3>
+      <p>Notre projet utilise la blockchain Polygon (MATIC) pour ses faibles coûts de transaction et sa rapidité. Les contrats intelligents sont développés en Solidity et auditée par des experts en sécurité pour garantir la fiabilité et la sécurité des transactions.</p>
+
+      <h3>4. NFTs et leurs Utilités</h3>
+      <p>Les NFTs dans RedM RP représentent divers actifs in-game :</p>
+      <ul>
+        <li>Terrains et propriétés</li>
+        <li>Animaux (chevaux, bétail)</li>
+        <li>Armes et équipements</li>
+        <li>Vêtements et accessoires</li>
+        <li>Véhicules (diligences, trains)</li>
+      </ul>
+      <p>Chaque NFT a des attributs uniques qui influencent le gameplay et la valeur sur le marché.</p>
+
+      <h3>5. Économie du Jeu</h3>
+      <p>L'économie de RedM RP NFT est basée sur le token $COWBOY. Ce token est utilisé pour :</p>
+      <ul>
+        <li>Acheter et vendre des NFTs sur le marché intégré</li>
+        <li>Payer des frais de transaction in-game</li>
+        <li>Participer à la gouvernance du projet</li>
+        <li>Staking pour obtenir des récompenses</li>
+      </ul>
+
+      <h3>6. Tokenomics</h3>
+      <p>La distribution initiale des tokens $COWBOY sera comme suit :</p>
+      <ul>
+        <li>40% Récompenses de jeu et staking</li>
+        <li>25% Équipe de développement (verrouillé sur 3 ans)</li>
+        <li>20% Vente publique</li>
+        <li>10% Marketing et partenariats</li>
+        <li>5% Réserve de liquidité</li>
+      </ul>
+
+      <h3>7. Utilisation du Token $COWBOY</h3>
+      <p>Voici les principales utilisations du token :</p>
+      <ul>
+        <li>Transactions entre joueurs : Les joueurs peuvent utiliser le $COWBOY pour échanger des biens et services entre eux, créant une économie dynamique et réaliste.</li>
+        <li>Achat de nourriture : Les joueurs peuvent acheter de la nourriture pour leurs personnages et leurs animaux, assurant leur survie et leur performance.</li>
+        <li>Achat de matériaux : Les matériaux nécessaires à la construction, la réparation et l'amélioration des équipements peuvent être achetés avec des $COWBOY.</li>
+        <li>Frais de transaction sur le marché NFT : L'achat et la vente de NFTs sur notre marché seront facilités par l'utilisation du token $COWBOY.</li>
+        <li>Récompenses de staking : Les détenteurs de $COWBOY peuvent staker leurs tokens pour gagner des récompenses passives.</li>
+        <li>Gouvernance : La participation aux votes et aux décisions de la DAO sera basée sur la détention de tokens $COWBOY.</li>
+      </ul>
+      <p>Cette utilisation diversifiée du token $COWBOY assure sa valeur et son utilité dans l'écosystème RedM RP NFT.</p>
+
+      <h3>8. Gouvernance</h3>
+      <p>RedM RP NFT adopte un modèle de gouvernance décentralisée. Les détenteurs de tokens $COWBOY peuvent voter sur les propositions de développement du jeu, les mises à jour de l'économie, et d'autres décisions importantes concernant l'écosystème.</p>
+
+      <h3>9. Conclusion</h3>
+      <p>RedM RP NFT représente une nouvelle frontière dans le gaming blockchain, offrant une expérience immersive et économiquement dynamique dans l'univers captivant de l'Ouest sauvage. Rejoignez-nous dans cette aventure passionnante où la propriété numérique rencontre le gameplay innovant.</p>
+    </section>
+
+    <section id="roadmap" class="roadmap">
+      <h2>Feuille de Route</h2>
+      <div class="roadmap-item">
+        <h4>Q3 2024 Lancement</h4>
+        <ul>
+          <li>Lancement du site web et du livre blanc</li>
+          <li>Début de la vente privée des tokens $COWBOY</li>
+          <li>Déploiement des premiers NFTs</li>
+        </ul>
+      </div>
+      <div class="roadmap-item">
+        <h4>Q4 2024 Développement du Jeu</h4>
+        <ul>
+          <li>Alpha fermée du jeu</li>
+          <li>Intégration des NFTs dans le gameplay</li>
+          <li>Lancement du marché NFT</li>
+        </ul>
+      </div>
+      <div class="roadmap-item">
+        <h4>Q1 2025 Expansion</h4>
+        <ul>
+          <li>Bêta ouverte du jeu</li>
+          <li>Lancement du système de staking</li>
+          <li>Implémentation de la gouvernance DAO</li>
+        </ul>
+      </div>
+      <div class="roadmap-item">
+        <h4>Q2 2025 et au-delà</h4>
+        <ul>
+          <li>Lancement officiel du jeu</li>
+          <li>Expansion continue du contenu et des fonctionnalités</li>
+          <li>Partenariats stratégiques pour l'adoption massive</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2024-2025 RedM RP NFT. Tous droits réservés.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script>
+    async function connectWallet() {
+      if (typeof window.ethereum !== 'undefined') {
+        try {
+          await window.ethereum.request({ method: 'eth_requestAccounts' });
+          console.log('Portefeuille connecté avec succès!');
+        } catch (error) {
+          console.error('Erreur lors de la connexion du portefeuille:', error);
+        }
+      } else {
+        console.log('MetaMask n\'est pas installé!');
+      }
+    }
+
+    document.querySelector('.connect-wallet').addEventListener('click', connectWallet);
+
+    function simulateMinting() {
+      const items = document.querySelectorAll('.item');
+      items.forEach(item => {
+        const supplyElement = item.querySelector('.supply');
+        const mintedElement = item.querySelector('.minted');
+        
+        if (supplyElement && mintedElement) {
+          const supply = parseInt(supplyElement.textContent.split(':')[1].trim());
+          const minted = Math.floor(Math.random() * (supply + 1));
+          mintedElement.textContent = `Mintés: ${minted}`;
+        }
+      });
+    }
+
+    window.addEventListener('load', simulateMinting);
+
+    function synchronizeNFTAnimation() {
+      const items = document.querySelectorAll('.item img');
+      items.forEach(img => {
+        img.style.animationDelay = '0s';
+      });
+    }
+
+    window.addEventListener('load', synchronizeNFTAnimation);
+  </script>
+</body></html>
